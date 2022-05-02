@@ -1,0 +1,591 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5EE2F2A628204A0A008717E6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EE2F2A528204A0A008717E6 /* AppDelegate.swift */; };
+		5EE2F2A828204A0A008717E6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EE2F2A728204A0A008717E6 /* SceneDelegate.swift */; };
+		5EE2F2AA28204A0A008717E6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EE2F2A928204A0A008717E6 /* ViewController.swift */; };
+		5EE2F2AD28204A0A008717E6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5EE2F2AB28204A0A008717E6 /* Main.storyboard */; };
+		5EE2F2AF28204A0A008717E6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5EE2F2AE28204A0A008717E6 /* Assets.xcassets */; };
+		5EE2F2B228204A0A008717E6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5EE2F2B028204A0A008717E6 /* LaunchScreen.storyboard */; };
+		5EE2F2BD28204A0B008717E6 /* MealDB_MVCTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EE2F2BC28204A0B008717E6 /* MealDB_MVCTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5EE2F2B928204A0B008717E6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5EE2F29A28204A0A008717E6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5EE2F2A128204A0A008717E6;
+			remoteInfo = "MealDB-MVC";
+		};
+		5EE2F2C328204A0B008717E6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5EE2F29A28204A0A008717E6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5EE2F2A128204A0A008717E6;
+			remoteInfo = "MealDB-MVC";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		5EE2F2A228204A0A008717E6 /* MealDB-MVC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MealDB-MVC.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5EE2F2A528204A0A008717E6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		5EE2F2A728204A0A008717E6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		5EE2F2A928204A0A008717E6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		5EE2F2AC28204A0A008717E6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		5EE2F2AE28204A0A008717E6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5EE2F2B128204A0A008717E6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		5EE2F2B328204A0A008717E6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5EE2F2B828204A0B008717E6 /* MealDB-MVCTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "MealDB-MVCTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5EE2F2BC28204A0B008717E6 /* MealDB_MVCTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealDB_MVCTests.swift; sourceTree = "<group>"; };
+		5EE2F2C228204A0B008717E6 /* MealDB-MVCUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "MealDB-MVCUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5EE2F29F28204A0A008717E6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5EE2F2B528204A0B008717E6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5EE2F2BF28204A0B008717E6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5EE2F29928204A0A008717E6 = {
+			isa = PBXGroup;
+			children = (
+				5EE2F2A428204A0A008717E6 /* MealDB-MVC */,
+				5EE2F2BB28204A0B008717E6 /* MealDB-MVCTests */,
+				5EE2F2A328204A0A008717E6 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		5EE2F2A328204A0A008717E6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5EE2F2A228204A0A008717E6 /* MealDB-MVC.app */,
+				5EE2F2B828204A0B008717E6 /* MealDB-MVCTests.xctest */,
+				5EE2F2C228204A0B008717E6 /* MealDB-MVCUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5EE2F2A428204A0A008717E6 /* MealDB-MVC */ = {
+			isa = PBXGroup;
+			children = (
+				5EE2F2A528204A0A008717E6 /* AppDelegate.swift */,
+				5EE2F2A728204A0A008717E6 /* SceneDelegate.swift */,
+				5EE2F2A928204A0A008717E6 /* ViewController.swift */,
+				5EE2F2AB28204A0A008717E6 /* Main.storyboard */,
+				5EE2F2AE28204A0A008717E6 /* Assets.xcassets */,
+				5EE2F2B028204A0A008717E6 /* LaunchScreen.storyboard */,
+				5EE2F2B328204A0A008717E6 /* Info.plist */,
+			);
+			path = "MealDB-MVC";
+			sourceTree = "<group>";
+		};
+		5EE2F2BB28204A0B008717E6 /* MealDB-MVCTests */ = {
+			isa = PBXGroup;
+			children = (
+				5EE2F2BC28204A0B008717E6 /* MealDB_MVCTests.swift */,
+			);
+			path = "MealDB-MVCTests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5EE2F2A128204A0A008717E6 /* MealDB-MVC */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5EE2F2CC28204A0B008717E6 /* Build configuration list for PBXNativeTarget "MealDB-MVC" */;
+			buildPhases = (
+				5EE2F29E28204A0A008717E6 /* Sources */,
+				5EE2F29F28204A0A008717E6 /* Frameworks */,
+				5EE2F2A028204A0A008717E6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "MealDB-MVC";
+			productName = "MealDB-MVC";
+			productReference = 5EE2F2A228204A0A008717E6 /* MealDB-MVC.app */;
+			productType = "com.apple.product-type.application";
+		};
+		5EE2F2B728204A0B008717E6 /* MealDB-MVCTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5EE2F2CF28204A0B008717E6 /* Build configuration list for PBXNativeTarget "MealDB-MVCTests" */;
+			buildPhases = (
+				5EE2F2B428204A0B008717E6 /* Sources */,
+				5EE2F2B528204A0B008717E6 /* Frameworks */,
+				5EE2F2B628204A0B008717E6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5EE2F2BA28204A0B008717E6 /* PBXTargetDependency */,
+			);
+			name = "MealDB-MVCTests";
+			productName = "MealDB-MVCTests";
+			productReference = 5EE2F2B828204A0B008717E6 /* MealDB-MVCTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		5EE2F2C128204A0B008717E6 /* MealDB-MVCUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5EE2F2D228204A0B008717E6 /* Build configuration list for PBXNativeTarget "MealDB-MVCUITests" */;
+			buildPhases = (
+				5EE2F2BE28204A0B008717E6 /* Sources */,
+				5EE2F2BF28204A0B008717E6 /* Frameworks */,
+				5EE2F2C028204A0B008717E6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5EE2F2C428204A0B008717E6 /* PBXTargetDependency */,
+			);
+			name = "MealDB-MVCUITests";
+			productName = "MealDB-MVCUITests";
+			productReference = 5EE2F2C228204A0B008717E6 /* MealDB-MVCUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5EE2F29A28204A0A008717E6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1330;
+				LastUpgradeCheck = 1330;
+				TargetAttributes = {
+					5EE2F2A128204A0A008717E6 = {
+						CreatedOnToolsVersion = 13.3;
+					};
+					5EE2F2B728204A0B008717E6 = {
+						CreatedOnToolsVersion = 13.3;
+						TestTargetID = 5EE2F2A128204A0A008717E6;
+					};
+					5EE2F2C128204A0B008717E6 = {
+						CreatedOnToolsVersion = 13.3;
+						TestTargetID = 5EE2F2A128204A0A008717E6;
+					};
+				};
+			};
+			buildConfigurationList = 5EE2F29D28204A0A008717E6 /* Build configuration list for PBXProject "MealDB-MVC" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5EE2F29928204A0A008717E6;
+			productRefGroup = 5EE2F2A328204A0A008717E6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5EE2F2A128204A0A008717E6 /* MealDB-MVC */,
+				5EE2F2B728204A0B008717E6 /* MealDB-MVCTests */,
+				5EE2F2C128204A0B008717E6 /* MealDB-MVCUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5EE2F2A028204A0A008717E6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5EE2F2B228204A0A008717E6 /* LaunchScreen.storyboard in Resources */,
+				5EE2F2AF28204A0A008717E6 /* Assets.xcassets in Resources */,
+				5EE2F2AD28204A0A008717E6 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5EE2F2B628204A0B008717E6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5EE2F2C028204A0B008717E6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5EE2F29E28204A0A008717E6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5EE2F2AA28204A0A008717E6 /* ViewController.swift in Sources */,
+				5EE2F2A628204A0A008717E6 /* AppDelegate.swift in Sources */,
+				5EE2F2A828204A0A008717E6 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5EE2F2B428204A0B008717E6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5EE2F2BD28204A0B008717E6 /* MealDB_MVCTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5EE2F2BE28204A0B008717E6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5EE2F2BA28204A0B008717E6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5EE2F2A128204A0A008717E6 /* MealDB-MVC */;
+			targetProxy = 5EE2F2B928204A0B008717E6 /* PBXContainerItemProxy */;
+		};
+		5EE2F2C428204A0B008717E6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5EE2F2A128204A0A008717E6 /* MealDB-MVC */;
+			targetProxy = 5EE2F2C328204A0B008717E6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		5EE2F2AB28204A0A008717E6 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5EE2F2AC28204A0A008717E6 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		5EE2F2B028204A0A008717E6 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5EE2F2B128204A0A008717E6 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5EE2F2CA28204A0B008717E6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		5EE2F2CB28204A0B008717E6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5EE2F2CD28204A0B008717E6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 86Z976V88Y;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "MealDB-MVC/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.touchopia.MealDB-MVC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5EE2F2CE28204A0B008717E6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 86Z976V88Y;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "MealDB-MVC/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.touchopia.MealDB-MVC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		5EE2F2D028204A0B008717E6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 86Z976V88Y;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.touchopia.MealDB-MVCTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MealDB-MVC.app/MealDB-MVC";
+			};
+			name = Debug;
+		};
+		5EE2F2D128204A0B008717E6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 86Z976V88Y;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.touchopia.MealDB-MVCTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MealDB-MVC.app/MealDB-MVC";
+			};
+			name = Release;
+		};
+		5EE2F2D328204A0B008717E6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 86Z976V88Y;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.touchopia.MealDB-MVCUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "MealDB-MVC";
+			};
+			name = Debug;
+		};
+		5EE2F2D428204A0B008717E6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 86Z976V88Y;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.touchopia.MealDB-MVCUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "MealDB-MVC";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5EE2F29D28204A0A008717E6 /* Build configuration list for PBXProject "MealDB-MVC" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5EE2F2CA28204A0B008717E6 /* Debug */,
+				5EE2F2CB28204A0B008717E6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5EE2F2CC28204A0B008717E6 /* Build configuration list for PBXNativeTarget "MealDB-MVC" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5EE2F2CD28204A0B008717E6 /* Debug */,
+				5EE2F2CE28204A0B008717E6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5EE2F2CF28204A0B008717E6 /* Build configuration list for PBXNativeTarget "MealDB-MVCTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5EE2F2D028204A0B008717E6 /* Debug */,
+				5EE2F2D128204A0B008717E6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5EE2F2D228204A0B008717E6 /* Build configuration list for PBXNativeTarget "MealDB-MVCUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5EE2F2D328204A0B008717E6 /* Debug */,
+				5EE2F2D428204A0B008717E6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5EE2F29A28204A0A008717E6 /* Project object */;
+}
