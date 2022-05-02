@@ -60,9 +60,7 @@ extension MealListViewController: UITableViewDataSource {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier) as? MealTableViewCell else {
             return UITableViewCell()
         }
-        
-        cell.mealImageView.image = UIImage(named: "placeholder-image")
-        cell.titleLabel.text = mealsArray[indexPath.row].strMeal
+        cell.configure(meal: mealsArray[indexPath.row])
         return cell
     }
     
