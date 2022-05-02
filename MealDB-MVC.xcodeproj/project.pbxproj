@@ -96,15 +96,11 @@
 		5EE2F2A428204A0A008717E6 /* MealDB-MVC */ = {
 			isa = PBXGroup;
 			children = (
-				5EE2F2A528204A0A008717E6 /* AppDelegate.swift */,
-				5EE2F2A728204A0A008717E6 /* SceneDelegate.swift */,
-				5EE2F2E128205713008717E6 /* APIClient.swift */,
-				5EE2F2A928204A0A008717E6 /* MealListViewController.swift */,
-				5EE2F2D828205492008717E6 /* MealDetailViewController.swift */,
-				5EE2F2D52820508D008717E6 /* Meal.swift */,
-				5EE2F2DB282054B6008717E6 /* MealTableViewCell.swift */,
-				5EE2F2E428205B51008717E6 /* UIImageView+Cache.swift */,
-				5EE2F2DC282054B6008717E6 /* MealTableViewCell.xib */,
+				5EE2F2E828206FC8008717E6 /* Delegates */,
+				5EE2F2E728206FBD008717E6 /* Meals API */,
+				5EE2F2E928206FD0008717E6 /* ViewControllers */,
+				5EE2F2EA28206FD8008717E6 /* Models */,
+				5EE2F2EB28206FDE008717E6 /* TableView Cells */,
 				5EE2F2AB28204A0A008717E6 /* Main.storyboard */,
 				5EE2F2AE28204A0A008717E6 /* Assets.xcassets */,
 				5EE2F2B028204A0A008717E6 /* LaunchScreen.storyboard */,
@@ -119,6 +115,50 @@
 				5EE2F2BC28204A0B008717E6 /* MealListViewControllerTests.swift */,
 			);
 			path = "MealDB-MVCTests";
+			sourceTree = "<group>";
+		};
+		5EE2F2E728206FBD008717E6 /* Meals API */ = {
+			isa = PBXGroup;
+			children = (
+				5EE2F2E128205713008717E6 /* APIClient.swift */,
+			);
+			path = "Meals API";
+			sourceTree = "<group>";
+		};
+		5EE2F2E828206FC8008717E6 /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				5EE2F2A528204A0A008717E6 /* AppDelegate.swift */,
+				5EE2F2A728204A0A008717E6 /* SceneDelegate.swift */,
+			);
+			path = Delegates;
+			sourceTree = "<group>";
+		};
+		5EE2F2E928206FD0008717E6 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				5EE2F2A928204A0A008717E6 /* MealListViewController.swift */,
+				5EE2F2D828205492008717E6 /* MealDetailViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		5EE2F2EA28206FD8008717E6 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				5EE2F2D52820508D008717E6 /* Meal.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		5EE2F2EB28206FDE008717E6 /* TableView Cells */ = {
+			isa = PBXGroup;
+			children = (
+				5EE2F2DB282054B6008717E6 /* MealTableViewCell.swift */,
+				5EE2F2E428205B51008717E6 /* UIImageView+Cache.swift */,
+				5EE2F2DC282054B6008717E6 /* MealTableViewCell.xib */,
+			);
+			path = "TableView Cells";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
