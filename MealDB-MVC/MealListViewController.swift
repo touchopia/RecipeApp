@@ -15,6 +15,8 @@ class MealListViewController: UIViewController {
     
     private var mealsArray = [Meal]()
     
+    private var currentMeal: Meal?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -33,6 +35,18 @@ class MealListViewController: UIViewController {
     
     func setupTableView() {
         tableView.register(UINib(nibName: "MealTableViewCell", bundle: nil), forCellReuseIdentifier: cellIdentifier)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "showDetailMealView" {
+        
+            if let viewController = segue.destination as? MealDetailViewController {
+                if let currentMeal = currentMeal {
+                    viewController.meal = currentMeal
+                }
+            }
+        }
     }
     
 }
@@ -60,7 +74,10 @@ extension MealListViewController: UITableViewDataSource {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier) as? MealTableViewCell else {
             return UITableViewCell()
         }
-        cell.configure(meal: mealsArray[indexPath.row])
+        
+        let meal = mealsArray[indexPath.row]
+        self.currentMeal = meal
+        cell.configure(meal: meal)
         return cell
     }
     

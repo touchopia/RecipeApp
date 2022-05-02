@@ -21,6 +21,12 @@ class MealTableViewCell: UITableViewCell {
         
     }
     
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        
+        self.mealImageView.image = nil
+    }
+
     func updateUI() {
         guard let meal = meal else {
             return
