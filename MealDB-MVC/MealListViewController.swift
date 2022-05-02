@@ -8,13 +8,11 @@
 import UIKit
 
 class MealListViewController: UIViewController {
-
-    private let cellIdentifier = "MealTableViewCell"
     
     @IBOutlet weak var tableView: UITableView!
     
+    private let cellIdentifier = "MealTableViewCell"
     private var mealsArray = [Meal]()
-    
     private var currentMeal: Meal?
     
     override func viewDidLoad() {

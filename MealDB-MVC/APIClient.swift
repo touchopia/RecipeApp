@@ -12,6 +12,7 @@ class APIClient {
     private init() {}
     
     let categoryURLString = "https://www.themealdb.com/api/json/v1/1/filter.php?c=Dessert"
+    let mealURLString = "https://www.themealdb.com/api/json/v1/1/lookup.php?i="
     
     func getMeals(completion: @escaping ([Meal]) -> Void) {
         
@@ -49,6 +50,41 @@ class APIClient {
             }
             
         }.resume()
-
+    }
+    
+    func getMeal(idString: String, completion: @escaping (Meal) -> Void) {
+        
+        guard !idString.isEmpty else {
+            return
+        }
+        
+        guard let url = URL(string: mealURLString + idString) else {
+            return
+        }
+        
+        URLSession.shared.dataTask(with: url) { data, _, error in
+                        
+            guard let data=data else {
+                return
+            }
+            
+            if error != nil {
+                return
+            }
+            
+            let decoder = JSONDecoder()
+            
+            do {
+                if let jsonString = String(data: data, encoding: .utf8) {
+                    let jsonData = Data(jsonString.utf8)
+                    let meals = try decoder.decode(MealsContainer.self, from: jsonData)
+                    if let meal = meals.meals.first {
+                        completion(meal)
+                    }
+                }
+            } catch let parseError {
+                print("JSON Error: \(parseError.localizedDescription)")
+            }
+        }.resume()
     }
 }
