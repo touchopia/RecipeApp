@@ -22,6 +22,8 @@
 		5EE2F2DE282054B6008717E6 /* MealTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EE2F2DB282054B6008717E6 /* MealTableViewCell.swift */; };
 		5EE2F2DF282054B6008717E6 /* MealTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5EE2F2DC282054B6008717E6 /* MealTableViewCell.xib */; };
 		5EE2F2E0282054B6008717E6 /* MealTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5EE2F2DC282054B6008717E6 /* MealTableViewCell.xib */; };
+		5EE2F2E228205713008717E6 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EE2F2E128205713008717E6 /* APIClient.swift */; };
+		5EE2F2E328205713008717E6 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EE2F2E128205713008717E6 /* APIClient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,7 @@
 		5EE2F2D828205492008717E6 /* MealDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealDetailViewController.swift; sourceTree = "<group>"; };
 		5EE2F2DB282054B6008717E6 /* MealTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MealTableViewCell.swift; sourceTree = "<group>"; };
 		5EE2F2DC282054B6008717E6 /* MealTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MealTableViewCell.xib; sourceTree = "<group>"; };
+		5EE2F2E128205713008717E6 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +96,7 @@
 				5EE2F2A528204A0A008717E6 /* AppDelegate.swift */,
 				5EE2F2A728204A0A008717E6 /* SceneDelegate.swift */,
 				5EE2F2A928204A0A008717E6 /* MealListViewController.swift */,
+				5EE2F2E128205713008717E6 /* APIClient.swift */,
 				5EE2F2D828205492008717E6 /* MealDetailViewController.swift */,
 				5EE2F2D52820508D008717E6 /* Meal.swift */,
 				5EE2F2DB282054B6008717E6 /* MealTableViewCell.swift */,
@@ -217,6 +221,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5EE2F2D62820508D008717E6 /* Meal.swift in Sources */,
+				5EE2F2E228205713008717E6 /* APIClient.swift in Sources */,
 				5EE2F2AA28204A0A008717E6 /* MealListViewController.swift in Sources */,
 				5EE2F2DD282054B6008717E6 /* MealTableViewCell.swift in Sources */,
 				5EE2F2A628204A0A008717E6 /* AppDelegate.swift in Sources */,
@@ -232,6 +237,7 @@
 				5EE2F2DE282054B6008717E6 /* MealTableViewCell.swift in Sources */,
 				5EE2F2D72820508D008717E6 /* Meal.swift in Sources */,
 				5EE2F2BD28204A0B008717E6 /* MealListViewControllerTests.swift in Sources */,
+				5EE2F2E328205713008717E6 /* APIClient.swift in Sources */,
 				5EE2F2DA28205492008717E6 /* MealDetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
