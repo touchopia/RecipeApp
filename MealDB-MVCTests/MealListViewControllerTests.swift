@@ -8,6 +8,8 @@
 import XCTest
 @testable import MealDB_MVC
 
-class MealDB_MVCTests: XCTestCase {
+class MealListViewControllerTests: XCTestCase {
+    
+    
 
 }

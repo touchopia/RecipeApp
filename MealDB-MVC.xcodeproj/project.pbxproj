@@ -13,7 +13,7 @@
 		5EE2F2AD28204A0A008717E6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5EE2F2AB28204A0A008717E6 /* Main.storyboard */; };
 		5EE2F2AF28204A0A008717E6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5EE2F2AE28204A0A008717E6 /* Assets.xcassets */; };
 		5EE2F2B228204A0A008717E6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5EE2F2B028204A0A008717E6 /* LaunchScreen.storyboard */; };
-		5EE2F2BD28204A0B008717E6 /* MealDB_MVCTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EE2F2BC28204A0B008717E6 /* MealDB_MVCTests.swift */; };
+		5EE2F2BD28204A0B008717E6 /* MealListViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EE2F2BC28204A0B008717E6 /* MealListViewControllerTests.swift */; };
 		5EE2F2D62820508D008717E6 /* Meal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EE2F2D52820508D008717E6 /* Meal.swift */; };
 		5EE2F2D72820508D008717E6 /* Meal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EE2F2D52820508D008717E6 /* Meal.swift */; };
 /* End PBXBuildFile section */
@@ -38,7 +38,7 @@
 		5EE2F2B128204A0A008717E6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5EE2F2B328204A0A008717E6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5EE2F2B828204A0B008717E6 /* MealDB-MVCTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "MealDB-MVCTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		5EE2F2BC28204A0B008717E6 /* MealDB_MVCTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealDB_MVCTests.swift; sourceTree = "<group>"; };
+		5EE2F2BC28204A0B008717E6 /* MealListViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealListViewControllerTests.swift; sourceTree = "<group>"; };
 		5EE2F2D52820508D008717E6 /* Meal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Meal.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -96,7 +96,7 @@
 		5EE2F2BB28204A0B008717E6 /* MealDB-MVCTests */ = {
 			isa = PBXGroup;
 			children = (
-				5EE2F2BC28204A0B008717E6 /* MealDB_MVCTests.swift */,
+				5EE2F2BC28204A0B008717E6 /* MealListViewControllerTests.swift */,
 			);
 			path = "MealDB-MVCTests";
 			sourceTree = "<group>";
@@ -214,7 +214,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5EE2F2D72820508D008717E6 /* Meal.swift in Sources */,
-				5EE2F2BD28204A0B008717E6 /* MealDB_MVCTests.swift in Sources */,
+				5EE2F2BD28204A0B008717E6 /* MealListViewControllerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
