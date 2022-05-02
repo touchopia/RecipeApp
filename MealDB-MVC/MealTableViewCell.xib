@@ -53,7 +53,7 @@
                 <outlet property="mealImageView" destination="Hf1-Pv-vct" id="5z6-hl-ZIl"/>
                 <outlet property="titleLabel" destination="QbF-Mj-65h" id="ki8-SS-tg8"/>
             </connections>
-            <point key="canvasLocation" x="42.028985507246382" y="41.852678571428569"/>
+            <point key="canvasLocation" x="-28" y="-130"/>
         </tableViewCell>
     </objects>
 </document>
