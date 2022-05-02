@@ -11,6 +11,8 @@ class MealDetailViewController: UIViewController {
     
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var instructionsLabel: UILabel!
+    @IBOutlet var ingrediateLabels: [UILabel]!
     
     let placeholder = UIImage(named: "placeholder-image")
     
@@ -42,6 +44,19 @@ class MealDetailViewController: UIViewController {
         if let meal = meal {
             self.titleLabel.text = meal.strMeal
             self.imageView.loadImageFromURL(urlString: meal.strMealThumb, placeholder: placeholder)
+            
+            instructionsLabel.text = meal.strInstructions
+            
+            ingrediateLabels[0].text = meal.strIngredient1 ?? ""
+            ingrediateLabels[1].text = meal.strIngredient2 ?? ""
+            ingrediateLabels[2].text = meal.strIngredient3 ?? ""
+            ingrediateLabels[3].text = meal.strIngredient4 ?? ""
+            ingrediateLabels[4].text = meal.strIngredient5 ?? ""
+            ingrediateLabels[5].text = meal.strIngredient6 ?? ""
+            ingrediateLabels[6].text = meal.strIngredient7 ?? ""
+            ingrediateLabels[7].text = meal.strIngredient8 ?? ""
+            ingrediateLabels[8].text = meal.strIngredient9 ?? ""
+            ingrediateLabels[9].text = meal.strIngredient10 ?? ""
         }
     }
     
