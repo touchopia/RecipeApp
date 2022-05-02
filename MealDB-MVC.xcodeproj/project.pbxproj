@@ -24,13 +24,6 @@
 			remoteGlobalIDString = 5EE2F2A128204A0A008717E6;
 			remoteInfo = "MealDB-MVC";
 		};
-		5EE2F2C328204A0B008717E6 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 5EE2F29A28204A0A008717E6 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 5EE2F2A128204A0A008717E6;
-			remoteInfo = "MealDB-MVC";
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -44,7 +37,6 @@
 		5EE2F2B328204A0A008717E6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5EE2F2B828204A0B008717E6 /* MealDB-MVCTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "MealDB-MVCTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EE2F2BC28204A0B008717E6 /* MealDB_MVCTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealDB_MVCTests.swift; sourceTree = "<group>"; };
-		5EE2F2C228204A0B008717E6 /* MealDB-MVCUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "MealDB-MVCUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,13 +48,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		5EE2F2B528204A0B008717E6 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		5EE2F2BF28204A0B008717E6 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -86,7 +71,6 @@
 			children = (
 				5EE2F2A228204A0A008717E6 /* MealDB-MVC.app */,
 				5EE2F2B828204A0B008717E6 /* MealDB-MVCTests.xctest */,
-				5EE2F2C228204A0B008717E6 /* MealDB-MVCUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -151,24 +135,6 @@
 			productReference = 5EE2F2B828204A0B008717E6 /* MealDB-MVCTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		5EE2F2C128204A0B008717E6 /* MealDB-MVCUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 5EE2F2D228204A0B008717E6 /* Build configuration list for PBXNativeTarget "MealDB-MVCUITests" */;
-			buildPhases = (
-				5EE2F2BE28204A0B008717E6 /* Sources */,
-				5EE2F2BF28204A0B008717E6 /* Frameworks */,
-				5EE2F2C028204A0B008717E6 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				5EE2F2C428204A0B008717E6 /* PBXTargetDependency */,
-			);
-			name = "MealDB-MVCUITests";
-			productName = "MealDB-MVCUITests";
-			productReference = 5EE2F2C228204A0B008717E6 /* MealDB-MVCUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -183,10 +149,6 @@
 						CreatedOnToolsVersion = 13.3;
 					};
 					5EE2F2B728204A0B008717E6 = {
-						CreatedOnToolsVersion = 13.3;
-						TestTargetID = 5EE2F2A128204A0A008717E6;
-					};
-					5EE2F2C128204A0B008717E6 = {
 						CreatedOnToolsVersion = 13.3;
 						TestTargetID = 5EE2F2A128204A0A008717E6;
 					};
@@ -207,7 +169,6 @@
 			targets = (
 				5EE2F2A128204A0A008717E6 /* MealDB-MVC */,
 				5EE2F2B728204A0B008717E6 /* MealDB-MVCTests */,
-				5EE2F2C128204A0B008717E6 /* MealDB-MVCUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -224,13 +185,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		5EE2F2B628204A0B008717E6 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		5EE2F2C028204A0B008717E6 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -258,13 +212,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		5EE2F2BE28204A0B008717E6 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -272,11 +219,6 @@
 			isa = PBXTargetDependency;
 			target = 5EE2F2A128204A0A008717E6 /* MealDB-MVC */;
 			targetProxy = 5EE2F2B928204A0B008717E6 /* PBXContainerItemProxy */;
-		};
-		5EE2F2C428204A0B008717E6 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 5EE2F2A128204A0A008717E6 /* MealDB-MVC */;
-			targetProxy = 5EE2F2C328204A0B008717E6 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -510,42 +452,6 @@
 			};
 			name = Release;
 		};
-		5EE2F2D328204A0B008717E6 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 86Z976V88Y;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.touchopia.MealDB-MVCUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = "MealDB-MVC";
-			};
-			name = Debug;
-		};
-		5EE2F2D428204A0B008717E6 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 86Z976V88Y;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.touchopia.MealDB-MVCUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = "MealDB-MVC";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -572,15 +478,6 @@
 			buildConfigurations = (
 				5EE2F2D028204A0B008717E6 /* Debug */,
 				5EE2F2D128204A0B008717E6 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		5EE2F2D228204A0B008717E6 /* Build configuration list for PBXNativeTarget "MealDB-MVCUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				5EE2F2D328204A0B008717E6 /* Debug */,
-				5EE2F2D428204A0B008717E6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
