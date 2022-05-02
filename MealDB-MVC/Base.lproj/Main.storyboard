@@ -37,11 +37,28 @@
                     <navigationItem key="navigationItem" id="Gbh-oW-yEK"/>
                     <connections>
                         <outlet property="tableView" destination="yEN-4F-5Fu" id="Kz8-dt-k4C"/>
+                        <segue destination="uqK-Jn-y6P" kind="show" identifier="showDetailMealView" id="Xze-LZ-RZV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="168" y="94"/>
+        </scene>
+        <!--Meal Detail View Controller-->
+        <scene sceneID="eib-SE-tma">
+            <objects>
+                <viewController id="uqK-Jn-y6P" customClass="MealDetailViewController" customModule="MealDB_MVC" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="p5D-xD-Wyw">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="uvV-wW-cdj"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="pUh-Me-MK3"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="teO-Wg-fCH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="977" y="94"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="bhy-88-L9Z">

@@ -12,6 +12,7 @@ class MealDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.title = "Meal Detail"
     }
     
 }

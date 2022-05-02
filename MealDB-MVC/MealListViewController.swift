@@ -40,7 +40,7 @@ class MealListViewController: UIViewController {
 extension MealListViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        performSegue(withIdentifier: "showDetailMealView", sender: nil)
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -63,7 +63,6 @@ extension MealListViewController: UITableViewDataSource {
         cell.configure(meal: mealsArray[indexPath.row])
         return cell
     }
-    
     
 }
 
