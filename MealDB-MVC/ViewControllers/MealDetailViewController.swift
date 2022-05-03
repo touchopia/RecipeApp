@@ -69,8 +69,6 @@ class MealDetailViewController: UIViewController {
                 meal.strIngredient19
             ]).compactMap { $0 }.filter { !$0.isEmpty }.sorted() // unwrap optionals
             
-            print(instructions)
-            
             for instruction in instructions {
                 let label = UILabel()
                 label.textAlignment = .center
