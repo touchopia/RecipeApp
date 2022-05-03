@@ -12,7 +12,7 @@ class MealDetailViewController: UIViewController {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var instructionsLabel: UILabel!
-    @IBOutlet var ingrediateLabels: [UILabel]!
+    @IBOutlet weak var stackView: UIStackView!
     
     let placeholder = UIImage(named: "placeholder-image")
     
@@ -42,21 +42,43 @@ class MealDetailViewController: UIViewController {
     
     func updateUI() {
         if let meal = meal {
-            self.titleLabel.text = meal.strMeal
-            self.imageView.loadImageFromURL(urlString: meal.strMealThumb, placeholder: placeholder)
-            
+            titleLabel.text = meal.strMeal
+            titleLabel.textColor = .white
+            imageView.loadImageFromURL(urlString: meal.strMealThumb, placeholder: placeholder)
             instructionsLabel.text = meal.strInstructions
             
-            ingrediateLabels[0].text = meal.strIngredient1 ?? ""
-            ingrediateLabels[1].text = meal.strIngredient2 ?? ""
-            ingrediateLabels[2].text = meal.strIngredient3 ?? ""
-            ingrediateLabels[3].text = meal.strIngredient4 ?? ""
-            ingrediateLabels[4].text = meal.strIngredient5 ?? ""
-            ingrediateLabels[5].text = meal.strIngredient6 ?? ""
-            ingrediateLabels[6].text = meal.strIngredient7 ?? ""
-            ingrediateLabels[7].text = meal.strIngredient8 ?? ""
-            ingrediateLabels[8].text = meal.strIngredient9 ?? ""
-            ingrediateLabels[9].text = meal.strIngredient10 ?? ""
+            let instructions = Set([
+                meal.strIngredient1,
+                meal.strIngredient2,
+                meal.strIngredient3,
+                meal.strIngredient4,
+                meal.strIngredient5,
+                meal.strIngredient6,
+                meal.strIngredient7,
+                meal.strIngredient8,
+                meal.strIngredient9,
+                meal.strIngredient10,
+                meal.strIngredient11,
+                meal.strIngredient12,
+                meal.strIngredient13,
+                meal.strIngredient14,
+                meal.strIngredient15,
+                meal.strIngredient16,
+                meal.strIngredient17,
+                meal.strIngredient18,
+                meal.strIngredient19
+            ]).compactMap { $0 }.filter { !$0.isEmpty }.sorted() // unwrap optionals
+            
+            print(instructions)
+            
+            for instruction in instructions {
+                let label = UILabel()
+                label.textAlignment = .center
+                label.text = instruction
+                label.font = UIFont(name: "Avanir Next", size: 18)
+                stackView.addArrangedSubview(label)
+            }
+            
         }
     }
     
