@@ -72,7 +72,7 @@ class MealDetailViewController: UIViewController {
             for instruction in instructions {
                 let label = UILabel()
                 label.textAlignment = .center
-                label.text = instruction
+                label.text = instruction.capitalized
                 label.font = UIFont(name: "Avanir Next", size: 18)
                 stackView.addArrangedSubview(label)
             }
