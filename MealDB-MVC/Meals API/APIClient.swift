@@ -38,17 +38,15 @@ class APIClient {
             let decoder = JSONDecoder()
             
             do {
-                if let jsonString = String(data: data, encoding: .utf8) {
-                    let jsonData = Data(jsonString.utf8)
-                    let meals = try decoder.decode(MealsContainer.self, from: jsonData)
-                    let mealsArray = meals.meals
-                    completion(mealsArray)
-                }
+                let meals = try decoder.decode(MealsContainer.self, from: data)
+                let mealsArray = meals.meals
+                completion(mealsArray)
             } catch let parseError {
-                completion(emptyMeals)
-                print("JSON Error \(parseError.localizedDescription)")
+                if let jsonString = String(data: data, encoding: .utf8) {
+                    print("JSON String: \(jsonString)")
+                }
+                print("JSON Error: \(parseError.localizedDescription)")
             }
-            
         }.resume()
     }
     
@@ -75,14 +73,14 @@ class APIClient {
             let decoder = JSONDecoder()
             
             do {
-                if let jsonString = String(data: data, encoding: .utf8) {
-                    let jsonData = Data(jsonString.utf8)
-                    let meals = try decoder.decode(MealsContainer.self, from: jsonData)
-                    if let meal = meals.meals.first {
-                        completion(meal)
-                    }
+                let meals = try decoder.decode(MealsContainer.self, from: data)
+                if let meal = meals.meals.first {
+                    completion(meal)
                 }
             } catch let parseError {
+                if let jsonString = String(data: data, encoding: .utf8) {
+                    print("JSON String: \(jsonString)")
+                }
                 print("JSON Error: \(parseError.localizedDescription)")
             }
         }.resume()
