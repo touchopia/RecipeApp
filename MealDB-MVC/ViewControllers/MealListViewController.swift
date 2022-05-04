@@ -20,7 +20,7 @@ class MealListViewController: UIViewController {
         
         self.title = "Meals"
         
-        setupTableView()
+        configureTableView()
         
         APIClient.shared.getMeals { [weak self] meals in
             
@@ -31,7 +31,7 @@ class MealListViewController: UIViewController {
         }
     }
     
-    func setupTableView() {
+    func configureTableView() {
         tableView.register(UINib(nibName: "MealTableViewCell", bundle: nil), forCellReuseIdentifier: cellIdentifier)
     }
     

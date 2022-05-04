@@ -12,7 +12,8 @@ class MealDetailViewController: UIViewController {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var instructionsLabel: UILabel!
-    @IBOutlet weak var stackView: UIStackView!
+    @IBOutlet weak var ingredientsLabel: UILabel!
+    @IBOutlet weak var ingredientsStackView: UIStackView!
     
     let placeholder = UIImage(named: "placeholder-image")
     
@@ -20,7 +21,7 @@ class MealDetailViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        ingredientsLabel.textColor = .white
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -41,21 +42,21 @@ class MealDetailViewController: UIViewController {
     }
     
     func updateUI() {
-        
         if let meal = meal {
             titleLabel.text = meal.strMeal
             titleLabel.textColor = .white
             imageView.loadImageFromURL(urlString: meal.strMealThumb, placeholder: placeholder)
             instructionsLabel.text = meal.strInstructions
             
-            for ingredient in meal.ingredientsArray {
+            let ingredientsArray = meal.ingredientsArray
+            
+            for ingredient in ingredientsArray {
                 let label = UILabel()
                 label.textAlignment = .center
                 label.text = ingredient.capitalized
                 label.font = UIFont(name: "Avanir Next", size: 18)
-                stackView.addArrangedSubview(label)
+                ingredientsStackView.addArrangedSubview(label)
             }
         }
     }
-    
 }

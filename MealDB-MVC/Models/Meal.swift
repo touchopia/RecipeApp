@@ -70,52 +70,27 @@ struct Meal : Codable {
     
     var ingredientsArray: [String] {
         let instructions = Set([
-            self.strIngredient1,
-            self.strIngredient2,
-            self.strIngredient3,
-            self.strIngredient4,
-            self.strIngredient5,
-            self.strIngredient6,
-            self.strIngredient7,
-            self.strIngredient8,
-            self.strIngredient9,
-            self.strIngredient10,
-            self.strIngredient11,
-            self.strIngredient12,
-            self.strIngredient13,
-            self.strIngredient14,
-            self.strIngredient15,
-            self.strIngredient16,
-            self.strIngredient17,
-            self.strIngredient18,
-            self.strIngredient19
+            String("\(self.strMeasure1 ?? "") \(self.strIngredient1 ?? "")"),
+            String("\(self.strMeasure2 ?? "") \(self.strIngredient2 ?? "")"),
+            String("\(self.strMeasure3 ?? "") \(self.strIngredient3 ?? "")"),
+            String("\(self.strMeasure4 ?? "") \(self.strIngredient4 ?? "")"),
+            String("\(self.strMeasure5 ?? "") \(self.strIngredient5 ?? "")"),
+            String("\(self.strMeasure6 ?? "") \(self.strIngredient6 ?? "")"),
+            String("\(self.strMeasure7 ?? "") \(self.strIngredient7 ?? "")"),
+            String("\(self.strMeasure8 ?? "") \(self.strIngredient8 ?? "")"),
+            String("\(self.strMeasure9 ?? "") \(self.strIngredient9 ?? "")"),
+            String("\(self.strMeasure10 ?? "") \(self.strIngredient10 ?? "")"),
+            String("\(self.strMeasure11 ?? "") \(self.strIngredient11 ?? "")"),
+            String("\(self.strMeasure12 ?? "") \(self.strIngredient12 ?? "")"),
+            String("\(self.strMeasure13 ?? "") \(self.strIngredient13 ?? "")"),
+            String("\(self.strMeasure14 ?? "") \(self.strIngredient14 ?? "")"),
+            String("\(self.strMeasure15 ?? "") \(self.strIngredient15 ?? "")"),
+            String("\(self.strMeasure16 ?? "") \(self.strIngredient16 ?? "")"),
+            String("\(self.strMeasure17 ?? "") \(self.strIngredient17 ?? "")"),
+            String("\(self.strMeasure18 ?? "") \(self.strIngredient18 ?? "")"),
+            String("\(self.strMeasure19 ?? "") \(self.strIngredient19 ?? "")")            
         ]).compactMap { $0 }.filter { !$0.isEmpty }.sorted() // unwrap optionals
         return instructions
-    }
-    
-    var measuresArray: [String] {
-        let measures = Set([
-            self.strMeasure1,
-            self.strMeasure2,
-            self.strMeasure3,
-            self.strMeasure4,
-            self.strMeasure5,
-            self.strMeasure6,
-            self.strMeasure7,
-            self.strMeasure8,
-            self.strMeasure9,
-            self.strMeasure10,
-            self.strMeasure11,
-            self.strMeasure12,
-            self.strMeasure13,
-            self.strMeasure14,
-            self.strMeasure15,
-            self.strMeasure16,
-            self.strMeasure17,
-            self.strMeasure18,
-            self.strMeasure19
-        ]).compactMap { $0 }.filter { !$0.isEmpty }.sorted() // unwrap optionals
-        return measures
     }
 }
 
