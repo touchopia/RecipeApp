@@ -41,42 +41,20 @@ class MealDetailViewController: UIViewController {
     }
     
     func updateUI() {
+        
         if let meal = meal {
             titleLabel.text = meal.strMeal
             titleLabel.textColor = .white
             imageView.loadImageFromURL(urlString: meal.strMealThumb, placeholder: placeholder)
             instructionsLabel.text = meal.strInstructions
             
-            let instructions = Set([
-                meal.strIngredient1,
-                meal.strIngredient2,
-                meal.strIngredient3,
-                meal.strIngredient4,
-                meal.strIngredient5,
-                meal.strIngredient6,
-                meal.strIngredient7,
-                meal.strIngredient8,
-                meal.strIngredient9,
-                meal.strIngredient10,
-                meal.strIngredient11,
-                meal.strIngredient12,
-                meal.strIngredient13,
-                meal.strIngredient14,
-                meal.strIngredient15,
-                meal.strIngredient16,
-                meal.strIngredient17,
-                meal.strIngredient18,
-                meal.strIngredient19
-            ]).compactMap { $0 }.filter { !$0.isEmpty }.sorted() // unwrap optionals
-            
-            for instruction in instructions {
+            for ingredient in meal.ingredientsArray {
                 let label = UILabel()
                 label.textAlignment = .center
-                label.text = instruction.capitalized
+                label.text = ingredient.capitalized
                 label.font = UIFont(name: "Avanir Next", size: 18)
                 stackView.addArrangedSubview(label)
             }
-            
         }
     }
     
