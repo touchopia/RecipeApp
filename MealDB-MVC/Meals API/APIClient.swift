@@ -19,6 +19,7 @@ class APIClient {
         let emptyMeals = [Meal]()
         
         guard let url = URL(string: categoryURLString) else {
+            // TODO: Do Error Handling Here
             completion(emptyMeals)
             return
         }
@@ -36,6 +37,7 @@ class APIClient {
                 let mealsArray = meals.meals
                 completion(mealsArray)
             } catch let parseError {
+                // TODO: Do Error Handling Here
                 if let jsonString = String(data: data, encoding: .utf8) {
                     print("JSON String: \(jsonString)")
                 }
@@ -69,6 +71,7 @@ class APIClient {
                     completion(meal)
                 }
             } catch let parseError {
+                // TODO: Do Error Handling Here
                 if let jsonString = String(data: data, encoding: .utf8) {
                     print("JSON String: \(jsonString)")
                 }
