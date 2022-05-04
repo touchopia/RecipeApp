@@ -88,7 +88,7 @@ struct Meal : Codable {
             String("\(self.strMeasure16 ?? "") \(self.strIngredient16 ?? "")"),
             String("\(self.strMeasure17 ?? "") \(self.strIngredient17 ?? "")"),
             String("\(self.strMeasure18 ?? "") \(self.strIngredient18 ?? "")"),
-            String("\(self.strMeasure19 ?? "") \(self.strIngredient19 ?? "")")            
+            String("\(self.strMeasure19 ?? "") \(self.strIngredient19 ?? "")")
         ]).compactMap { $0 }.filter { !$0.isEmpty }.sorted() // unwrap optionals
         return instructions
     }
