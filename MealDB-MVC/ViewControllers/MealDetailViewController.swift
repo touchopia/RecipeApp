@@ -32,9 +32,8 @@ class MealDetailViewController: UIViewController {
     func getMeal() {
         if let meal = meal {
             APIClient.shared.getMeal(idString: meal.idMeal) { [weak self] meal in
-                self?.meal = meal
-                
                 DispatchQueue.main.async {
+                    self?.meal = meal
                     self?.updateUI()
                 }
             }

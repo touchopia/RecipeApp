@@ -25,20 +25,14 @@ class APIClient {
         
         URLSession.shared.dataTask(with: url) { data, _, error in
                         
-            guard let data=data else {
+            guard let data = data, error == nil else {
+                // TODO: Do Error Handling Here
                 completion(emptyMeals)
                 return
             }
-            
-            if error != nil {
-                completion(emptyMeals)
-                return
-            }
-            
-            let decoder = JSONDecoder()
-            
+        
             do {
-                let meals = try decoder.decode(MealsContainer.self, from: data)
+                let meals = try JSONDecoder().decode(MealsContainer.self, from: data)
                 let mealsArray = meals.meals
                 completion(mealsArray)
             } catch let parseError {
@@ -52,28 +46,25 @@ class APIClient {
     
     func getMeal(idString: String, completion: @escaping (Meal) -> Void) {
         
-        guard !idString.isEmpty else {
+        guard idString.isEmpty == false else {
+            // TODO: Do Error Handling Here
             return
         }
         
         guard let url = URL(string: mealURLString + idString) else {
+            // TODO: Do Error Handling Here
             return
         }
         
         URLSession.shared.dataTask(with: url) { data, _, error in
                         
-            guard let data=data else {
+            guard let data=data, error == nil else {
+                // TODO: Do Error Handling Here
                 return
             }
-            
-            if error != nil {
-                return
-            }
-            
-            let decoder = JSONDecoder()
             
             do {
-                let meals = try decoder.decode(MealsContainer.self, from: data)
+                let meals = try JSONDecoder().decode(MealsContainer.self, from: data)
                 if let meal = meals.meals.first {
                     completion(meal)
                 }

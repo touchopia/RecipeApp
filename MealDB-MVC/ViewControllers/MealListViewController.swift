@@ -23,7 +23,6 @@ class MealListViewController: UIViewController {
         configureTableView()
         
         APIClient.shared.getMeals { [weak self] meals in
-            
             DispatchQueue.main.async {
                 self?.mealsArray = meals.sorted { $0.strMeal < $1.strMeal }
                 self?.tableView.reloadData()
@@ -46,7 +45,6 @@ class MealListViewController: UIViewController {
             }
         }
     }
-    
 }
 
 extension MealListViewController: UITableViewDelegate {
@@ -58,7 +56,6 @@ extension MealListViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 144
     }
-    
 }
 
 extension MealListViewController: UITableViewDataSource {
@@ -78,6 +75,5 @@ extension MealListViewController: UITableViewDataSource {
         cell.configure(meal: meal)
         return cell
     }
-    
 }
 
