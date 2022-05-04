@@ -81,21 +81,23 @@
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="TopLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U4c-FZ-UC5">
-                                                <rect key="frame" x="20" y="444" width="374" height="144"/>
+                                                <rect key="frame" x="20" y="458" width="374" height="144"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="144" id="t2L-js-rhg"/>
                                                 </constraints>
                                                 <attributedString key="attributedText">
                                                     <fragment content="Label">
                                                         <attributes>
+                                                            <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                                             <font key="NSFont" size="14" name="AvenirNext-Medium"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                         </attributes>
                                                     </fragment>
                                                 </attributedString>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v1f-oZ-938">
-                                                <rect key="frame" x="0.0" y="588" width="414" height="44"/>
+                                                <rect key="frame" x="0.0" y="616" width="414" height="44"/>
                                                 <color key="backgroundColor" systemColor="systemOrangeColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="44" id="4px-mm-V3b"/>
@@ -111,13 +113,13 @@
                                                 </attributedString>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="S4F-Sr-oqU">
-                                                <rect key="frame" x="0.0" y="632" width="414" height="368"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="S4F-Sr-oqU">
+                                                <rect key="frame" x="0.0" y="660" width="414" height="340"/>
                                             </stackView>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
-                                            <constraint firstItem="v1f-oZ-938" firstAttribute="top" secondItem="U4c-FZ-UC5" secondAttribute="bottom" id="3FF-PY-VoF"/>
+                                            <constraint firstItem="v1f-oZ-938" firstAttribute="top" secondItem="U4c-FZ-UC5" secondAttribute="bottom" constant="14" id="3FF-PY-VoF"/>
                                             <constraint firstItem="lKg-2X-ZFa" firstAttribute="leading" secondItem="FHl-IT-J9g" secondAttribute="leading" id="4aa-uO-Ii8"/>
                                             <constraint firstItem="S4F-Sr-oqU" firstAttribute="top" secondItem="v1f-oZ-938" secondAttribute="bottom" id="Ahd-xR-ggM"/>
                                             <constraint firstItem="LHw-As-bO6" firstAttribute="leading" secondItem="FHl-IT-J9g" secondAttribute="leading" id="DBS-9a-Doo"/>
@@ -129,7 +131,7 @@
                                             <constraint firstItem="v1f-oZ-938" firstAttribute="leading" secondItem="FHl-IT-J9g" secondAttribute="leading" id="MjX-vw-9Ms"/>
                                             <constraint firstAttribute="trailing" secondItem="lKg-2X-ZFa" secondAttribute="trailing" id="RaV-ec-jCn"/>
                                             <constraint firstItem="S4F-Sr-oqU" firstAttribute="leading" secondItem="FHl-IT-J9g" secondAttribute="leading" id="bmo-nP-6eG"/>
-                                            <constraint firstItem="U4c-FZ-UC5" firstAttribute="top" secondItem="lKg-2X-ZFa" secondAttribute="bottom" id="ehs-kX-CyU"/>
+                                            <constraint firstItem="U4c-FZ-UC5" firstAttribute="top" secondItem="lKg-2X-ZFa" secondAttribute="bottom" constant="14" id="ehs-kX-CyU"/>
                                             <constraint firstAttribute="trailing" secondItem="S4F-Sr-oqU" secondAttribute="trailing" id="fYl-hB-CJ9"/>
                                             <constraint firstItem="lKg-2X-ZFa" firstAttribute="top" secondItem="LHw-As-bO6" secondAttribute="bottom" id="nkG-vb-img"/>
                                             <constraint firstAttribute="trailing" secondItem="LHw-As-bO6" secondAttribute="trailing" id="s4h-7K-nUX"/>
