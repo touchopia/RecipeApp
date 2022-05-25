@@ -22,8 +22,8 @@
 		5EE2F2DE282054B6008717E6 /* MealTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EE2F2DB282054B6008717E6 /* MealTableViewCell.swift */; };
 		5EE2F2DF282054B6008717E6 /* MealTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5EE2F2DC282054B6008717E6 /* MealTableViewCell.xib */; };
 		5EE2F2E0282054B6008717E6 /* MealTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5EE2F2DC282054B6008717E6 /* MealTableViewCell.xib */; };
-		5EE2F2E228205713008717E6 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EE2F2E128205713008717E6 /* APIClient.swift */; };
-		5EE2F2E328205713008717E6 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EE2F2E128205713008717E6 /* APIClient.swift */; };
+		5EE2F2E228205713008717E6 /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EE2F2E128205713008717E6 /* HTTPClient.swift */; };
+		5EE2F2E328205713008717E6 /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EE2F2E128205713008717E6 /* HTTPClient.swift */; };
 		5EE2F2E528205B51008717E6 /* UIImageView+Cache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EE2F2E428205B51008717E6 /* UIImageView+Cache.swift */; };
 		5EE2F2E628205B51008717E6 /* UIImageView+Cache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EE2F2E428205B51008717E6 /* UIImageView+Cache.swift */; };
 /* End PBXBuildFile section */
@@ -53,7 +53,7 @@
 		5EE2F2D828205492008717E6 /* MealDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealDetailViewController.swift; sourceTree = "<group>"; };
 		5EE2F2DB282054B6008717E6 /* MealTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MealTableViewCell.swift; sourceTree = "<group>"; };
 		5EE2F2DC282054B6008717E6 /* MealTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MealTableViewCell.xib; sourceTree = "<group>"; };
-		5EE2F2E128205713008717E6 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		5EE2F2E128205713008717E6 /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
 		5EE2F2E428205B51008717E6 /* UIImageView+Cache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+Cache.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -120,7 +120,7 @@
 		5EE2F2E728206FBD008717E6 /* Meals API */ = {
 			isa = PBXGroup;
 			children = (
-				5EE2F2E128205713008717E6 /* APIClient.swift */,
+				5EE2F2E128205713008717E6 /* HTTPClient.swift */,
 			);
 			path = "Meals API";
 			sourceTree = "<group>";
@@ -265,7 +265,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5EE2F2D62820508D008717E6 /* Meal.swift in Sources */,
-				5EE2F2E228205713008717E6 /* APIClient.swift in Sources */,
+				5EE2F2E228205713008717E6 /* HTTPClient.swift in Sources */,
 				5EE2F2AA28204A0A008717E6 /* MealListViewController.swift in Sources */,
 				5EE2F2DD282054B6008717E6 /* MealTableViewCell.swift in Sources */,
 				5EE2F2A628204A0A008717E6 /* AppDelegate.swift in Sources */,
@@ -282,7 +282,7 @@
 				5EE2F2DE282054B6008717E6 /* MealTableViewCell.swift in Sources */,
 				5EE2F2D72820508D008717E6 /* Meal.swift in Sources */,
 				5EE2F2BD28204A0B008717E6 /* MealListViewControllerTests.swift in Sources */,
-				5EE2F2E328205713008717E6 /* APIClient.swift in Sources */,
+				5EE2F2E328205713008717E6 /* HTTPClient.swift in Sources */,
 				5EE2F2DA28205492008717E6 /* MealDetailViewController.swift in Sources */,
 				5EE2F2E628205B51008717E6 /* UIImageView+Cache.swift in Sources */,
 			);

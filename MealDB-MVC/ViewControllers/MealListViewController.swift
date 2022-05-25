@@ -19,10 +19,9 @@ class MealListViewController: UIViewController {
         super.viewDidLoad()
         
         self.title = "Meals"
-        
         configureTableView()
         
-        APIClient.shared.getMeals { [weak self] meals in
+        HTTPClient.shared.getMeals { [weak self] meals in
             DispatchQueue.main.async {
                 self?.mealsArray = meals.sorted { $0.strMeal < $1.strMeal }
                 self?.tableView.reloadData()
@@ -37,7 +36,6 @@ class MealListViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         if segue.identifier == "showDetailMealView" {
-        
             if let viewController = segue.destination as? MealDetailViewController {
                 if let currentMeal = currentMeal {
                     viewController.meal = currentMeal
@@ -50,6 +48,7 @@ class MealListViewController: UIViewController {
 extension MealListViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        currentMeal = mealsArray[indexPath.row]
         performSegue(withIdentifier: "showDetailMealView", sender: nil)
     }
     

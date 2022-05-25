@@ -7,8 +7,8 @@
 
 import Foundation
 
-class APIClient {
-    static let shared = APIClient()
+class HTTPClient {
+    static let shared = HTTPClient()
     private init() {}
     
     let categoryURLString = "https://www.themealdb.com/api/json/v1/1/filter.php?c=Dessert"

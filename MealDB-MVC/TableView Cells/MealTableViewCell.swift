@@ -16,14 +16,8 @@ class MealTableViewCell: UITableViewCell {
     
     let placeholderImage = UIImage(named: "placeholder-image")
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        
-    }
-    
     override func prepareForReuse() {
         super.prepareForReuse()
-        
         self.mealImageView.image = nil
     }
 
@@ -32,13 +26,13 @@ class MealTableViewCell: UITableViewCell {
             return
         }
         
-        self.mealImageView?.loadImageFromURL(urlString: meal.strMealThumb, placeholder: placeholderImage)
+        self.mealImageView?.loadImageFromURL(urlString: meal.strMealThumb,
+                                             placeholder: placeholderImage)
         self.titleLabel.text = meal.strMeal
     }
     
     func configure(meal: Meal) {
         self.meal = meal
-        
         updateUI()
     }
 }

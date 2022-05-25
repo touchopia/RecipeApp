@@ -25,13 +25,13 @@ class MealDetailViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        getMeal()
         super.viewWillAppear(animated)
+        getMeal()
     }
     
     func getMeal() {
         if let meal = meal {
-            APIClient.shared.getMeal(idString: meal.idMeal) { [weak self] meal in
+            HTTPClient.shared.getMeal(idString: meal.idMeal) { [weak self] meal in
                 DispatchQueue.main.async {
                     self?.meal = meal
                     self?.updateUI()
