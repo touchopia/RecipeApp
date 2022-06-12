@@ -22,9 +22,7 @@ class MealTableViewCell: UITableViewCell {
     }
 
     func updateUI() {
-        guard let meal = meal else {
-            return
-        }
+        guard let meal = meal else { return }
         
         self.mealImageView?.loadImageFromURL(urlString: meal.strMealThumb,
                                              placeholder: placeholderImage)
