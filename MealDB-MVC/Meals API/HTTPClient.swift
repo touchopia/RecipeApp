@@ -25,13 +25,13 @@ class HTTPClient {
         }
         
         URLSession.shared.dataTask(with: url) { data, _, error in
-                        
+            
             guard let data = data, error == nil else {
                 // TODO: Do Error Handling Here
                 completion(emptyMeals)
                 return
             }
-        
+            
             do {
                 let meals = try JSONDecoder().decode(MealsContainer.self, from: data)
                 let mealsArray = meals.meals
@@ -59,7 +59,7 @@ class HTTPClient {
         }
         
         URLSession.shared.dataTask(with: url) { data, _, error in
-                        
+            
             guard let data=data, error == nil else {
                 // TODO: Do Error Handling Here
                 return
