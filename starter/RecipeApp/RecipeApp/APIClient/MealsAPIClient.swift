@@ -40,19 +40,15 @@ final class MealsAPIClient {
     
     func getMeal(idString: String, completion: @escaping (MealResultType) -> Void) {
         
-        guard idString.isEmpty == false else {
-            // TODO: Do Error Handling Here
-            return
-        }
-        
         guard let url = Endpoints.mealURL(with: idString) else {
-            // TODO: Do Error Handling Here
+            let urlError = NSError(domain: "URL error when calling meal endpoint", code: 0)
+            completion(.failure(urlError))
             return
         }
         
-        URLSession.shared.dataTask(with: url) { data, _, error in
+        URLSession.shared.dataTask(with: url) { data, response, error in
             
-            guard let data=data, error == nil else {
+            guard let data=data, let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 200, error == nil else {
                 guard let error = error else { return }
                 completion(.failure(error))
                 return
