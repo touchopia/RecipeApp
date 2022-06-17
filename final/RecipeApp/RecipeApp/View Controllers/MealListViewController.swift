@@ -14,7 +14,8 @@ class MealListViewController: UIViewController {
     private let cellIdentifier = "MealTableViewCell"
     private var mealsArray = [Meal]()
     private var currentMeal: Meal?
-    private let client = MealsAPIClient()
+    
+    private let client: HTTPClient = MealsAPIClient()
     
     override func viewDidLoad() {
         super.viewDidLoad()

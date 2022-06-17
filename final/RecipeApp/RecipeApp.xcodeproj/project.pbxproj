@@ -113,8 +113,8 @@
 			isa = PBXGroup;
 			children = (
 				5E20F69B285CE6C400461B13 /* Endpoints.swift */,
-				5E20F68A285CE5CC00461B13 /* MealsAPIClient.swift */,
 				5E6D6B51285D41CE00FE233E /* HTTPClient.swift */,
+				5E20F68A285CE5CC00461B13 /* MealsAPIClient.swift */,
 			);
 			path = APIClient;
 			sourceTree = "<group>";

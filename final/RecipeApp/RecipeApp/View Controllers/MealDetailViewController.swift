@@ -19,7 +19,7 @@ class MealDetailViewController: UIViewController {
     
     var meal: Meal?
 
-    let client = MealsAPIClient()
+    let client: HTTPClient = MealsAPIClient()
     
     override func viewDidLoad() {
         super.viewDidLoad()
