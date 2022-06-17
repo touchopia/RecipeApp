@@ -21,6 +21,8 @@
 		5E20F69A285CE63D00461B13 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E20F698285CE63D00461B13 /* Main.storyboard */; };
 		5E20F69C285CE6C400461B13 /* Endpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E20F69B285CE6C400461B13 /* Endpoints.swift */; };
 		5E6D6B4B285CF40600FE233E /* RecipeAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E6D6B4A285CF40600FE233E /* RecipeAppTests.swift */; };
+		5E6D6B52285D41CE00FE233E /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E6D6B51285D41CE00FE233E /* HTTPClient.swift */; };
+		5E6D6B53285D41CE00FE233E /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E6D6B51285D41CE00FE233E /* HTTPClient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,7 @@
 		5E20F69B285CE6C400461B13 /* Endpoints.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Endpoints.swift; sourceTree = "<group>"; };
 		5E6D6B48285CF40600FE233E /* RecipeAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RecipeAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E6D6B4A285CF40600FE233E /* RecipeAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeAppTests.swift; sourceTree = "<group>"; };
+		5E6D6B51285D41CE00FE233E /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +114,7 @@
 			children = (
 				5E20F69B285CE6C400461B13 /* Endpoints.swift */,
 				5E20F68A285CE5CC00461B13 /* MealsAPIClient.swift */,
+				5E6D6B51285D41CE00FE233E /* HTTPClient.swift */,
 			);
 			path = APIClient;
 			sourceTree = "<group>";
@@ -266,6 +270,7 @@
 				5E20F68F285CE5DF00461B13 /* MealDetailViewController.swift in Sources */,
 				5E20F697285CE5FC00461B13 /* MealTableViewCell.swift in Sources */,
 				5E20F691285CE5EA00461B13 /* Meal.swift in Sources */,
+				5E6D6B52285D41CE00FE233E /* HTTPClient.swift in Sources */,
 				5E20F679285CE4F900461B13 /* SceneDelegate.swift in Sources */,
 				5E20F69C285CE6C400461B13 /* Endpoints.swift in Sources */,
 				5E20F696285CE5FC00461B13 /* UIImageView+Cache.swift in Sources */,
@@ -276,6 +281,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5E6D6B53285D41CE00FE233E /* HTTPClient.swift in Sources */,
 				5E6D6B4B285CF40600FE233E /* RecipeAppTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
