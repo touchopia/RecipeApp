@@ -1,2 +1,4 @@
-# MealDB-MVC
-MVC Version of the MealDB App
+# Recipe App
+
+Convert MVC Version of the Receip App to MVVM
+
