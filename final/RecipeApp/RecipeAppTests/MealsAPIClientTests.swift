@@ -6,7 +6,7 @@
 //  Copyright © 2022 Touchopia, LLC. All rights reserved.
 
 import XCTest
-@testable import RecipeApp
+import RecipeApp
 
 class MealsAPIClientTests: XCTestCase {
     
