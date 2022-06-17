@@ -2,8 +2,8 @@
 //  UIImageView+Cache.swift
 //
 //
-//  Created by Phil Wright on 12/7/21.
-//  Copyright © 2021 Touchopia, LLC. All rights reserved.
+//  Created by Aryaman Sharda on 1/1/2019.
+//
 
 import UIKit
 

@@ -11,7 +11,7 @@ typealias MealResultType = Result<Meal, Error>
 typealias MealsResultType = Result<[Meal], Error>
 
 final class MealsAPIClient {
-
+    
     func getMeals(category: String, completion: @escaping (MealsResultType) -> Void) {
         guard let categoryURL = Endpoints.categoriesURL(with: category) else {
             let categoryError = NSError(domain: "Category :\(category) not found", code: 0)
@@ -28,7 +28,7 @@ final class MealsAPIClient {
             }
             
             do {
-                let meals = try JSONDecoder().decode(MealsContainer.self, from: data)
+                let meals = try JSONDecoder().decode(MealsItem.self, from: data)
                 let mealsArray = meals.meals
                 completion(.success(mealsArray))
             } catch let error {
@@ -59,7 +59,7 @@ final class MealsAPIClient {
             }
             
             do {
-                let meals = try JSONDecoder().decode(MealsContainer.self, from: data)
+                let meals = try JSONDecoder().decode(MealsItem.self, from: data)
                 if let meal = meals.meals.first {
                     completion(.success(meal))
                 }
