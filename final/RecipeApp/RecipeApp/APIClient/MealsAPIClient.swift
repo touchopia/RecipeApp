@@ -7,10 +7,10 @@
 
 import Foundation
 
-typealias MealResultType = Result<Meal, Error>
-typealias MealsResultType = Result<[Meal], Error>
-
 final class MealsAPIClient: HTTPClient {
+    
+    typealias MealResultType = Result<Meal, Error>
+    typealias MealsResultType = Result<[Meal], Error>
     
     func getMeals(category: String, completion: @escaping (MealsResultType) -> Void) {
         guard let categoryURL = Endpoints.categoriesURL(with: category) else {
