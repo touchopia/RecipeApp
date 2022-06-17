@@ -10,10 +10,10 @@ import XCTest
 
 class MealsAPIClientTests: XCTestCase {
     
-    var client: HTTPClient?
+    private var client: HTTPClient?
     
     func test_initSUT() {
-        let client = makeSUT()
+        client = makeSUT()
         XCTAssertNotNil(client)
     }
     
