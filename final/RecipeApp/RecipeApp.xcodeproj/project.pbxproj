@@ -131,8 +131,8 @@
 		5E20F69E285CE6DC00461B13 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				5E20F68D285CE5DF00461B13 /* MealDetailViewController.swift */,
 				5E20F68C285CE5DF00461B13 /* MealListViewController.swift */,
+				5E20F68D285CE5DF00461B13 /* MealDetailViewController.swift */,
 				5E20F6A0285CE6F400461B13 /* MealTableViewCell */,
 			);
 			path = "View Controllers";

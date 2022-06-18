@@ -11,9 +11,12 @@ class MealListViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
+    
     private let cellIdentifier = "MealTableViewCell"
     private var mealsArray = [Meal]()
     private var currentMeal: Meal?
+    
+    private let refreshControl = UIRefreshControl()
     
     private let client: HTTPClient = MealsAPIClient()
     
@@ -23,23 +26,33 @@ class MealListViewController: UIViewController {
         self.title = "Meals"
         configureTableView()
         
+        refreshMealsData()
+    }
+    
+    func configureTableView() {
+        tableView.register(UINib(nibName: "MealTableViewCell", bundle: nil), forCellReuseIdentifier: cellIdentifier)
+        tableView.tableFooterView = UIView()
+        tableView.delegate = self
+        tableView.dataSource = self
+        refreshControl.addTarget(self, action: #selector(refreshMealsData), for: .valueChanged)
+        tableView.refreshControl = refreshControl
+    }
+    
+    @objc private func refreshMealsData() {
+        
         client.getMeals(category: "Dessert") { [weak self] result in
             
             DispatchQueue.main.async {
-                
                 switch result {
                 case .success(let meals):
                     self?.mealsArray = meals.sorted { $0.strMeal < $1.strMeal }
                     self?.tableView.reloadData()
                 case .failure(let error):
-                    print(error)
+                    self?.showAlert(title:"Network Error", message: error.localizedDescription)
                 }
+                self?.refreshControl.endRefreshing()
             }
         }
-    }
-    
-    func configureTableView() {
-        tableView.register(UINib(nibName: "MealTableViewCell", bundle: nil), forCellReuseIdentifier: cellIdentifier)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -51,6 +64,14 @@ class MealListViewController: UIViewController {
                 }
             }
         }
+    }
+    
+    private func showAlert(title: String, message: String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Retry", style: .default, handler: { [weak self] alert in
+            self?.refreshMealsData()
+        }))
+        self.present(alert, animated: true, completion: nil)
     }
 }
 
