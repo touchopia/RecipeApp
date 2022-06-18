@@ -8,10 +8,6 @@
 import Foundation
 
 final class MealsAPIClient: HTTPClient {
-    
-    typealias MealResultType = Result<Meal, Error>
-    typealias MealsResultType = Result<[Meal], Error>
-    
     func getMeals(category: String, completion: @escaping (MealsResultType) -> Void) {
         guard let categoryURL = Endpoints.categoriesURL(with: category) else {
             let categoryError = NSError(domain: "Category :\(category) not found", code: 0)

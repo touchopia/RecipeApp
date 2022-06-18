@@ -8,6 +8,9 @@
 import Foundation
 
 protocol HTTPClient {
-    func getMeals(category: String, completion: @escaping (MealsAPIClient.MealsResultType) -> Void)
-    func getMeal(idString: String, completion: @escaping (MealsAPIClient.MealResultType) -> Void)
+    typealias MealResultType = Result<Meal, Error>
+    typealias MealsResultType = Result<[Meal], Error>
+    
+    func getMeals(category: String, completion: @escaping (MealsResultType) -> Void)
+    func getMeal(idString: String, completion: @escaping (MealResultType) -> Void)
 }
