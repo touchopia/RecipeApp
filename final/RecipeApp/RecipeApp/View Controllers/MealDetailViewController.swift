@@ -28,10 +28,14 @@ class MealDetailViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        refreshMeal()
+    }
+    
+    private func refreshMeal() {
         getMeal()
     }
     
-    func getMeal() {
+    private func getMeal() {
         if let meal = meal {
             client.getMeal(idString: meal.idMeal) { [weak self] result in
                 DispatchQueue.main.async {
@@ -40,7 +44,7 @@ class MealDetailViewController: UIViewController {
                         self?.meal = meal
                         self?.updateUI()
                     case .failure(let error):
-                        print(error)
+                        self?.showAlert(title:"Network Error", message: error.localizedDescription, completion: self?.refreshMeal)
                     }
                 }
             }

@@ -24,8 +24,8 @@ class MealListViewController: UIViewController {
         super.viewDidLoad()
         
         self.title = "Meals"
-        configureTableView()
         
+        configureTableView()
         refreshMealsData()
     }
     
@@ -48,7 +48,7 @@ class MealListViewController: UIViewController {
                     self?.mealsArray = meals.sorted { $0.strMeal < $1.strMeal }
                     self?.tableView.reloadData()
                 case .failure(let error):
-                    self?.showAlert(title:"Network Error", message: error.localizedDescription)
+                    self?.showAlert(title:"Network Error", message: error.localizedDescription, completion: self?.refreshMealsData)
                 }
                 self?.refreshControl.endRefreshing()
             }
@@ -64,14 +64,6 @@ class MealListViewController: UIViewController {
                 }
             }
         }
-    }
-    
-    private func showAlert(title: String, message: String) {
-        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "Retry", style: .default, handler: { [weak self] alert in
-            self?.refreshMealsData()
-        }))
-        self.present(alert, animated: true, completion: nil)
     }
 }
 
