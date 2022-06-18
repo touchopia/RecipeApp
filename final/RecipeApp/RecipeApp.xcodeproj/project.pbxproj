@@ -32,6 +32,8 @@
 		5E6D6B5A285D442000FE233E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E20F676285CE4F900461B13 /* AppDelegate.swift */; };
 		5E6D6B5B285D442300FE233E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E20F678285CE4F900461B13 /* SceneDelegate.swift */; };
 		5E6D6B5C285D442700FE233E /* UIImageView+Cache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E20F693285CE5FC00461B13 /* UIImageView+Cache.swift */; };
+		5E6D6B5E285D540C00FE233E /* ViewControlle+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E6D6B5D285D540C00FE233E /* ViewControlle+Alert.swift */; };
+		5E6D6B5F285D540E00FE233E /* ViewControlle+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E6D6B5D285D540C00FE233E /* ViewControlle+Alert.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +65,7 @@
 		5E6D6B48285CF40600FE233E /* RecipeAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RecipeAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E6D6B4A285CF40600FE233E /* MealsAPIClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealsAPIClientTests.swift; sourceTree = "<group>"; };
 		5E6D6B51285D41CE00FE233E /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
+		5E6D6B5D285D540C00FE233E /* ViewControlle+Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewControlle+Alert.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,6 +162,7 @@
 			isa = PBXGroup;
 			children = (
 				5E20F693285CE5FC00461B13 /* UIImageView+Cache.swift */,
+				5E6D6B5D285D540C00FE233E /* ViewControlle+Alert.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -278,6 +282,7 @@
 				5E20F677285CE4F900461B13 /* AppDelegate.swift in Sources */,
 				5E20F68F285CE5DF00461B13 /* MealDetailViewController.swift in Sources */,
 				5E20F697285CE5FC00461B13 /* MealTableViewCell.swift in Sources */,
+				5E6D6B5E285D540C00FE233E /* ViewControlle+Alert.swift in Sources */,
 				5E20F691285CE5EA00461B13 /* Meal.swift in Sources */,
 				5E6D6B52285D41CE00FE233E /* HTTPClient.swift in Sources */,
 				5E20F679285CE4F900461B13 /* SceneDelegate.swift in Sources */,
@@ -298,6 +303,7 @@
 				5E6D6B5B285D442300FE233E /* SceneDelegate.swift in Sources */,
 				5E6D6B57285D441100FE233E /* MealTableViewCell.swift in Sources */,
 				5E6D6B53285D41CE00FE233E /* HTTPClient.swift in Sources */,
+				5E6D6B5F285D540E00FE233E /* ViewControlle+Alert.swift in Sources */,
 				5E6D6B5C285D442700FE233E /* UIImageView+Cache.swift in Sources */,
 				5E6D6B55285D43FC00FE233E /* Endpoints.swift in Sources */,
 				5E6D6B4B285CF40600FE233E /* MealsAPIClientTests.swift in Sources */,
