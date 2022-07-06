@@ -13,12 +13,11 @@ class MealsAPIClientTests: XCTestCase {
     private var client: HTTPClient?
     
     func test_initSUT() {
-        client = makeSUT()
-        XCTAssertNotNil(client)
+        self.client = makeSUT()
+        XCTAssertNotNil(self.client)
     }
     
     // Helper Methods
-    
     func makeSUT() -> HTTPClient {
         return MealsAPIClient()
     }
