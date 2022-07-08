@@ -8,6 +8,10 @@
 import Foundation
 
 final class MealsAPIClient: HTTPClient {
+    
+    typealias MealResultType = Result<Meal, Error>
+    typealias MealsResultType = Result<[Meal], Error>
+    
     func getMeals(category: String, completion: @escaping (MealsResultType) -> Void) {
         guard let categoryURL = Endpoints.categoriesURL(with: category) else {
             let categoryError = NSError(domain: "Category :\(category) not found", code: 0)
@@ -15,23 +19,22 @@ final class MealsAPIClient: HTTPClient {
             return
         }
         
-        let task = URLSession.shared.dataTask(with: categoryURL) { data, _, error in
-            
-            guard let data = data, error == nil else {
-                guard let error = error else { return }
-                completion(.failure(error))
-                return
-            }
-            
-            do {
-                let meals = try JSONDecoder().decode(MealsItem.self, from: data)
-                let mealsArray = meals.meals
-                completion(.success(mealsArray))
-            } catch let error {
+        get(from: categoryURL) { result in
+            switch result {
+            case .success(let (data, response)):
+                if response.statusCode == 200 {
+                    do {
+                        let meals = try JSONDecoder().decode(MealsItem.self, from: data)
+                        let mealsArray = meals.meals
+                        completion(.success(mealsArray))
+                    } catch let error {
+                        completion(.failure(error))
+                    }
+                }
+            case .failure(let error):
                 completion(.failure(error))
             }
         }
-        task.resume()
     }
     
     func getMeal(idString: String, completion: @escaping (MealResultType) -> Void) {
@@ -42,22 +45,22 @@ final class MealsAPIClient: HTTPClient {
             return
         }
         
-        URLSession.shared.dataTask(with: url) { data, response, error in
-            
-            guard let data=data, let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 200, error == nil else {
-                guard let error = error else { return }
-                completion(.failure(error))
-                return
-            }
-            
-            do {
-                let meals = try JSONDecoder().decode(MealsItem.self, from: data)
-                if let meal = meals.meals.first {
-                    completion(.success(meal))
+        get(from: url) { result in
+            switch result {
+            case .success(let (data, response)):
+                if response.statusCode == 200 {
+                    do {
+                        let meals = try JSONDecoder().decode(MealsItem.self, from: data)
+                        if let meal = meals.meals.first {
+                            completion(.success(meal))
+                        }
+                    } catch let error {
+                        completion(.failure(error))
+                    }
                 }
-            } catch let error {
+            case .failure(let error):
                 completion(.failure(error))
             }
-        }.resume()
+        }
     }
 }
