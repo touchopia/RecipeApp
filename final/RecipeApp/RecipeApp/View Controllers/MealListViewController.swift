@@ -18,7 +18,7 @@ class MealListViewController: UIViewController {
     
     private let refreshControl = UIRefreshControl()
     
-    private let client: HTTPClient = MealsAPIClient()
+    private let client = MealsAPIClient()
     
     override func viewDidLoad() {
         super.viewDidLoad()
