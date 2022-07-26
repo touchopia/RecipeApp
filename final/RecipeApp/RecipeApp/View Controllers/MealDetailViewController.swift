@@ -8,65 +8,53 @@
 import UIKit
 
 class MealDetailViewController: UIViewController {
-    
-    @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var imageView: UIImageView!
-    @IBOutlet weak var instructionsLabel: UILabel!
-    @IBOutlet weak var ingredientsLabel: UILabel!
-    @IBOutlet weak var ingredientsStackView: UIStackView!
-    
-    let placeholder = UIImage(named: "placeholder-image")
-    
-    var meal: Meal?
+    @IBOutlet var titleLabel: UILabel!
+    @IBOutlet var imageView: UIImageView!
+    @IBOutlet var instructionsLabel: UILabel!
+    @IBOutlet var ingredientsLabel: UILabel!
+    @IBOutlet var ingredientsStackView: UIStackView!
 
-    let client = MealsAPIClient()
-    
+    let placeholder = UIImage(named: "placeholder-image")
+    var viewModel: DetailViewModel?
+
     override func viewDidLoad() {
         super.viewDidLoad()
         ingredientsLabel.textColor = .white
     }
-    
+
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        refreshMeal()
-    }
-    
-    private func refreshMeal() {
         getMeal()
     }
-    
+
     private func getMeal() {
-        if let meal = meal {
-            client.getMeal(idString: meal.idMeal) { [weak self] result in
-                DispatchQueue.main.async {
-                    switch result {
-                    case .success(let meal):
-                        self?.meal = meal
-                        self?.updateUI()
-                    case .failure(let error):
-                        self?.showAlert(title:"Network Error", message: error.localizedDescription, completion: self?.refreshMeal)
-                    }
+        guard let viewModel = viewModel else { return }
+
+        let client = MealsAPIClient()
+
+        client.getMeal(idString: viewModel.id) { [weak self] result in
+            DispatchQueue.main.async {
+                switch result {
+                case let .success(meal):
+                    self?.viewModel = DetailViewModel(meal: meal)
+                    self?.setupViewModel(with: self?.viewModel)
+                case let .failure(error):
+                    self?.showAlert(title: "Network Error", message: error.localizedDescription, completion: self?.getMeal)
                 }
             }
         }
     }
-    
-    func updateUI() {
-        if let meal = meal {
-            titleLabel.text = meal.strMeal
-            titleLabel.textColor = .white
-            imageView.loadImageFromURL(urlString: meal.strMealThumb, placeholder: placeholder)
-            instructionsLabel.text = meal.strInstructions
-            
-            let ingredientsArray = meal.ingredientsArray
-            
-            for ingredient in ingredientsArray {
-                let label = UILabel()
-                label.textAlignment = .center
-                label.text = ingredient.capitalized
-                label.font = UIFont(name: "Avanir Next", size: 18)
-                ingredientsStackView.addArrangedSubview(label)
-            }
+
+    private func setupViewModel(with viewModel: DetailViewModel?) {
+        guard let viewModel = viewModel else { return }
+
+        titleLabel.text = viewModel.title
+        titleLabel.textColor = viewModel.titleColor
+        instructionsLabel.text = viewModel.instructions
+        imageView.loadImageFromURL(urlString: viewModel.thumbnail, placeholder: placeholder)
+
+        for label in viewModel.labelsArray {
+            ingredientsStackView.addArrangedSubview(label)
         }
     }
 }

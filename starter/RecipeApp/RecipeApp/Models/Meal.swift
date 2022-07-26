@@ -7,11 +7,11 @@
 
 import Foundation
 
-struct MealsItem : Codable {
+struct MealsItem: Codable {
     let meals: [Meal]
 }
 
-struct Meal : Codable {
+struct Meal: Codable {
     let idMeal: String
     let strMeal: String
     let strMealThumb: String
@@ -65,32 +65,31 @@ struct Meal : Codable {
     let strImageSource: String?
     let strCreativeCommonsConfirmed: String?
     let dateModified: String?
-    
+
     // Computed Properties
-    
+
     var ingredientsArray: [String] {
         let instructions = Set([
-            String("\(self.strMeasure1 ?? "") \(self.strIngredient1 ?? "")"),
-            String("\(self.strMeasure2 ?? "") \(self.strIngredient2 ?? "")"),
-            String("\(self.strMeasure3 ?? "") \(self.strIngredient3 ?? "")"),
-            String("\(self.strMeasure4 ?? "") \(self.strIngredient4 ?? "")"),
-            String("\(self.strMeasure5 ?? "") \(self.strIngredient5 ?? "")"),
-            String("\(self.strMeasure6 ?? "") \(self.strIngredient6 ?? "")"),
-            String("\(self.strMeasure7 ?? "") \(self.strIngredient7 ?? "")"),
-            String("\(self.strMeasure8 ?? "") \(self.strIngredient8 ?? "")"),
-            String("\(self.strMeasure9 ?? "") \(self.strIngredient9 ?? "")"),
-            String("\(self.strMeasure10 ?? "") \(self.strIngredient10 ?? "")"),
-            String("\(self.strMeasure11 ?? "") \(self.strIngredient11 ?? "")"),
-            String("\(self.strMeasure12 ?? "") \(self.strIngredient12 ?? "")"),
-            String("\(self.strMeasure13 ?? "") \(self.strIngredient13 ?? "")"),
-            String("\(self.strMeasure14 ?? "") \(self.strIngredient14 ?? "")"),
-            String("\(self.strMeasure15 ?? "") \(self.strIngredient15 ?? "")"),
-            String("\(self.strMeasure16 ?? "") \(self.strIngredient16 ?? "")"),
-            String("\(self.strMeasure17 ?? "") \(self.strIngredient17 ?? "")"),
-            String("\(self.strMeasure18 ?? "") \(self.strIngredient18 ?? "")"),
-            String("\(self.strMeasure19 ?? "") \(self.strIngredient19 ?? "")")
+            String("\(strMeasure1 ?? "") \(strIngredient1 ?? "")"),
+            String("\(strMeasure2 ?? "") \(strIngredient2 ?? "")"),
+            String("\(strMeasure3 ?? "") \(strIngredient3 ?? "")"),
+            String("\(strMeasure4 ?? "") \(strIngredient4 ?? "")"),
+            String("\(strMeasure5 ?? "") \(strIngredient5 ?? "")"),
+            String("\(strMeasure6 ?? "") \(strIngredient6 ?? "")"),
+            String("\(strMeasure7 ?? "") \(strIngredient7 ?? "")"),
+            String("\(strMeasure8 ?? "") \(strIngredient8 ?? "")"),
+            String("\(strMeasure9 ?? "") \(strIngredient9 ?? "")"),
+            String("\(strMeasure10 ?? "") \(strIngredient10 ?? "")"),
+            String("\(strMeasure11 ?? "") \(strIngredient11 ?? "")"),
+            String("\(strMeasure12 ?? "") \(strIngredient12 ?? "")"),
+            String("\(strMeasure13 ?? "") \(strIngredient13 ?? "")"),
+            String("\(strMeasure14 ?? "") \(strIngredient14 ?? "")"),
+            String("\(strMeasure15 ?? "") \(strIngredient15 ?? "")"),
+            String("\(strMeasure16 ?? "") \(strIngredient16 ?? "")"),
+            String("\(strMeasure17 ?? "") \(strIngredient17 ?? "")"),
+            String("\(strMeasure18 ?? "") \(strIngredient18 ?? "")"),
+            String("\(strMeasure19 ?? "") \(strIngredient19 ?? "")"),
         ]).compactMap { $0 }.filter { !$0.isEmpty }.sorted() // unwrap optionals
         return instructions
     }
 }
-

@@ -7,12 +7,12 @@
 
 import UIKit
 
-extension UIViewController {
-    public func showAlert(title: String, message: String, completion: (() -> ())?) {
+public extension UIViewController {
+    func showAlert(title: String, message: String, completion: (() -> Void)?) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "Retry", style: .default, handler: { alert in
+        alert.addAction(UIAlertAction(title: "Retry", style: .default, handler: { _ in
             if let completion = completion { completion() }
         }))
-        self.present(alert, animated: true, completion: nil)
+        present(alert, animated: true, completion: nil)
     }
 }

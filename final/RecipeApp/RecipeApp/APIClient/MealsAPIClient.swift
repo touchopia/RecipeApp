@@ -8,17 +8,16 @@
 import Foundation
 
 final class MealsAPIClient: HTTPClient {
-    
     typealias MealResultType = Result<Meal, Error>
     typealias MealsResultType = Result<[Meal], Error>
-    
+
     func getMeals(category: String, completion: @escaping (MealsResultType) -> Void) {
         guard let categoryURL = Endpoints.categoriesURL(with: category) else {
             let categoryError = NSError(domain: "Category :\(category) not found", code: 0)
             completion(.failure(categoryError))
             return
         }
-        
+
         get(from: categoryURL) { result in
             switch result {
             case .success(let (data, response)):
@@ -27,24 +26,23 @@ final class MealsAPIClient: HTTPClient {
                         let meals = try JSONDecoder().decode(MealsItem.self, from: data)
                         let mealsArray = meals.meals
                         completion(.success(mealsArray))
-                    } catch let error {
+                    } catch {
                         completion(.failure(error))
                     }
                 }
-            case .failure(let error):
+            case let .failure(error):
                 completion(.failure(error))
             }
         }
     }
-    
+
     func getMeal(idString: String, completion: @escaping (MealResultType) -> Void) {
-        
         guard let url = Endpoints.mealURL(with: idString) else {
             let urlError = NSError(domain: "URL error when calling meal endpoint", code: 0)
             completion(.failure(urlError))
             return
         }
-        
+
         get(from: url) { result in
             switch result {
             case .success(let (data, response)):
@@ -54,11 +52,11 @@ final class MealsAPIClient: HTTPClient {
                         if let meal = meals.meals.first {
                             completion(.success(meal))
                         }
-                    } catch let error {
+                    } catch {
                         completion(.failure(error))
                     }
                 }
-            case .failure(let error):
+            case let .failure(error):
                 completion(.failure(error))
             }
         }

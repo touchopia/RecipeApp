@@ -8,16 +8,15 @@
 import Foundation
 
 enum Endpoints {
-    
     static var baseURLString: String {
         "https://www.themealdb.com/api/json/v1/1"
     }
-    
+
     static func categoriesURL(with category: String) -> URL? {
         URL(string: "\(baseURLString)/filter.php?c=\(category)")
     }
-    
-    static func mealURL(with id:String) -> URL? {
+
+    static func mealURL(with id: String) -> URL? {
         return URL(string: "\(baseURLString)/lookup.php?i=\(id)")
     }
 }

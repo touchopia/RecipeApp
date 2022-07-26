@@ -34,6 +34,7 @@
 		5E6D6B5C285D442700FE233E /* UIImageView+Cache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E20F693285CE5FC00461B13 /* UIImageView+Cache.swift */; };
 		5E6D6B5E285D540C00FE233E /* ViewControlle+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E6D6B5D285D540C00FE233E /* ViewControlle+Alert.swift */; };
 		5E6D6B5F285D540E00FE233E /* ViewControlle+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E6D6B5D285D540C00FE233E /* ViewControlle+Alert.swift */; };
+		5EA82AF22878950B001B41BE /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EA82AF12878950B001B41BE /* DetailViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +67,7 @@
 		5E6D6B4A285CF40600FE233E /* MealsAPIClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealsAPIClientTests.swift; sourceTree = "<group>"; };
 		5E6D6B51285D41CE00FE233E /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
 		5E6D6B5D285D540C00FE233E /* ViewControlle+Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewControlle+Alert.swift"; sourceTree = "<group>"; };
+		5EA82AF12878950B001B41BE /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +138,7 @@
 			children = (
 				5E20F68C285CE5DF00461B13 /* MealListViewController.swift */,
 				5E20F68D285CE5DF00461B13 /* MealDetailViewController.swift */,
+				5EA82AF12878950B001B41BE /* DetailViewModel.swift */,
 				5E20F6A0285CE6F400461B13 /* MealTableViewCell */,
 			);
 			path = "View Controllers";
@@ -284,6 +287,7 @@
 				5E20F697285CE5FC00461B13 /* MealTableViewCell.swift in Sources */,
 				5E6D6B5E285D540C00FE233E /* ViewControlle+Alert.swift in Sources */,
 				5E20F691285CE5EA00461B13 /* Meal.swift in Sources */,
+				5EA82AF22878950B001B41BE /* DetailViewModel.swift in Sources */,
 				5E6D6B52285D41CE00FE233E /* HTTPClient.swift in Sources */,
 				5E20F679285CE4F900461B13 /* SceneDelegate.swift in Sources */,
 				5E20F69C285CE6C400461B13 /* Endpoints.swift in Sources */,
